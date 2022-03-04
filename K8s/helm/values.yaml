@@ -7,6 +7,10 @@ image:
 
 # Alternative payment gateway URL
 # Default is https://www.paypal.com
+
+#This depends on linked kubernetes' namespace added in Torque
+namespace: torque-sb
+
 payment:
   gateway: null
   #gateway: https://www.worldpay.com
@@ -30,6 +34,6 @@ openshift: false
 
 # Storage class to use with redis statefulset.
 redis:
-  storageClassName: standard
+  storageClassName: gp2
 
 ocCreateRoute: false
